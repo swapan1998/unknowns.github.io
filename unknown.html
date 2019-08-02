@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title> Pre-roll </title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <style>
+        iframe {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+        }
+
+        html {
+            background-color: #fff;
+        }
+    /*start pre-roll style*/
+.ml-auto {
+    margin-left: auto; }
+
+.player-reyden {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  height:100%;
+}
+.player-reyden__block-player {
+    width: 100%;
+  height:100%;
+    position: relative;
+    display: flex;
+    transition: .2s ease-in-out; }
+.player-reyden__block-player.active-player {
+    width: 70%; }
+@media only screen and (max-width: 992px) {
+    .player-reyden__block-player.active-player {
+        width: 60%; } }
+@media only screen and (max-width: 810px) {
+    .player-reyden__block-player.active-player .player-reyden__logo-block {
+        display: none; }
+    .player-reyden__block-player.active-player .player-reyden__chat-button {
+        width: 100%; }
+}
+@media only screen and (max-width: 600px) {
+    .player-reyden__block-player.active-player .player-reyden__chat-button {
+        width: auto; }}
+@media only screen and (max-width: 530px) {
+    .player-reyden__block-player.active-player {
+        width: 50%; } }
+@media only screen and (max-width: 480px) {
+    .player-reyden__block-player.active-player {
+        width: 0; } }
+.player-reyden__block-player.active-player .player-reyden__chat {
+    font-size: 70%;
+    transition: .2s ease-in-out; }
+@media only screen and (max-width: 1200px) {
+    .player-reyden__block-player.active-player .player-reyden__chat {
+        font-size: 55%; } }
+.player-reyden__block-player.active-player .player-reyden__now {
+    font-size: 60%;
+    transition: .2s ease-in-out; }
+@media only screen and (max-width: 1200px) {
+    .player-reyden__block-player.active-player .player-reyden__now {
+        font-size: 55%; } }
+.player-reyden__block-player.active-player .player-reyden__center-button {
+    transition: .2s ease-in-out; }
+@media only screen and (max-width: 1200px) {
+    .player-reyden__block-player.active-player .player-reyden__center-button {
+        width: 60%; } }
+@media only screen and (max-width: 992px) {
+    .player-reyden__block-player.active-player .player-reyden__center-button {
+        width: 70%; } }
+@media only screen and (max-width: 800px) {
+    .player-reyden__block-player.active-player .player-reyden__center-button {
+        width: 80%; } }
+@media only screen and (max-width: 810px) {
+    .player-reyden__block-player.active-player .player-reyden__center-button {
+        width: auto; } }
+@media only screen and (max-width: 600px) {
+    .player-reyden__block-player.active-player .player-reyden__center-button {
+        width: 50%; } }
+@media only screen and (max-width: 530px) {
+    .player-reyden__block-player.active-player .player-reyden__center-button {
+        width: 100%;
+        padding-bottom: 10px; } }
+@media only screen and (max-width: 480px) {
+    .player-reyden__block-player.active-player .player-reyden__center-button {
+        display: none; } }
+.player-reyden__block-player.active-player .player-reyden__now span.now-chat {
+    padding-right: 1rem; }
+@media only screen and (max-width: 530px) {
+    .player-reyden__block-player.active-player .player-reyden__now {
+        display: none; } }
+.player-reyden__block-player.active-player .player-reyden__right-button {
+    transition: .2s ease-in-out; }
+@media only screen and (max-width: 992px) {
+    .player-reyden__block-player.active-player .player-reyden__right-button {
+        font-size: 79%; } }
+@media only screen and (max-width: 680px) {
+    .player-reyden__block-player.active-player .player-reyden__right-button {
+        bottom: 190px; } }
+@media only screen and (max-width: 540px) {
+    .player-reyden__block-player.active-player .player-reyden__right-button {
+        bottom: 170px; } }
+@media only screen and (max-width: 480px) {
+    .player-reyden__block-player.active-player .player-reyden__right-button {
+        display: none; } }
+.player-reyden__block-player.active-player .player-reyden__left-button {
+    transition: .2s ease-in-out; }
+@media only screen and (max-width: 992px) {
+    .player-reyden__block-player.active-player .player-reyden__left-button {
+        font-size: 79%; } }
+@media only screen and (max-width: 680px) {
+    .player-reyden__block-player.active-player .player-reyden__left-button {
+        bottom: 100px; } }
+@media only screen and (max-width: 540px) {
+    .player-reyden__block-player.active-player .player-reyden__left-button {
+        bottom: 80px; } }
+@media only screen and (max-width: 480px) {
+    .player-reyden__block-player.active-player .player-reyden__left-button {
+        display: none; } }
+.player-reyden iframe, .player-reyden #SamplePlayerDivID {
+    height: 100%; }
+    /*
+.player-reyden iframe {
+    height: 720px; }
+@media only screen and (max-width: 992px) {
+    .player-reyden iframe {
+        height: 410px; } }
+@media only screen and (max-width: 758px) {
+    .player-reyden iframe {
+        height: 54vw; } }
+@media only screen and (max-width: 400px) {
+    .player-reyden iframe {
+        height: 250px; } }
+    */
+.player-reyden__main-block {
+    width: 100%;
+  height:100%;
+}
+.player-reyden__frame-player {
+    position: relative;
+    display: flex;
+    width: 100%; height:100%;}
+.player-reyden__left-button {
+    position: absolute;
+    left: 0;
+    bottom: 150px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 170%;
+    font-weight: 100;
+    text-align: center;
+    padding: 20px 40px;
+    overflow: hidden;
+    font-family: 'Exo 2 Light', sans-serif;
+    border: none; }
+@media only screen and (max-width: 1920px) {
+    .player-reyden__left-button {
+        font-size: 110%;
+        padding: 10px 30px; } }
+@media only screen and (max-width: 992px) {
+    .player-reyden__left-button {
+        font-size: 110%;
+        padding: 10px 30px; } }
+@media only screen and (max-width: 600px) {
+    .player-reyden__left-button {
+        font-size: 110%; } }
+@media only screen and (max-width: 540px) {
+    .player-reyden__left-button {
+        font-size: 100%; } }
+@media only screen and (max-width: 500px) {
+    .player-reyden__left-button {
+        bottom: 80px;
+        padding: 5px 20px;
+        font-size: 80%; } }
+@media only screen and (max-width: 460px) {
+    .player-reyden__left-button {
+        bottom: 70px; } }
+@media only screen and (max-width: 380px) {
+    .player-reyden__left-button {
+        bottom: 168px; } }
+.player-reyden__left-button:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: #4B367C; }
+.player-reyden__center-button {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    bottom: 0;
+    width: auto;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 170%;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    font-family: 'Exo 2 Light', sans-serif; }
+@media only screen and (max-width: 1140px) {
+    .player-reyden__center-button {
+        width: auto;
+        padding: 0 20px; } }
+@media only screen and (max-width: 992px) {
+    .player-reyden__center-button {
+        width: auto;
+        padding: 0 20px; }
+    .player-reyden__center-button:before {
+        display: none; } }
+@media only screen and (max-width: 780px) {
+    .player-reyden__center-button {
+        width: 60%; } }
+@media only screen and (max-width: 660px) {
+    .player-reyden__center-button {
+        width: 70%; } }
+@media only screen and (max-width: 560px) {
+    .player-reyden__center-button {
+        width: 40%;
+        padding-bottom: 0; } }
+@media only screen and (max-width: 500px) {
+    .player-reyden__center-button {
+        width: auto;
+        padding-bottom: 10px;
+        background: transparent; } }
+@media only screen and (max-width: 400px) {
+    .player-reyden__center-button {
+        width: auto; } }
+@media only screen and (max-width: 360px) {
+    .player-reyden__center-button {
+        width: 70%;
+        bottom: 80px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .player-reyden__center-button .align-center {
+        display: block; } }
+.player-reyden__center-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10px;
+    background: #4B367C;
+    left: 0; }
+.player-reyden__right-button {
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 170%;
+    font-weight: 100;
+    text-align: center;
+    padding: 20px 40px;
+    overflow: hidden;
+    font-family: 'Exo 2 Light', sans-serif;
+    border: none; }
+@media only screen and (max-width: 1920px) {
+    .player-reyden__right-button {
+        font-size: 110%;
+        padding: 10px 30px; } }
+@media only screen and (max-width: 992px) {
+    .player-reyden__right-button {
+        font-size: 110%;
+        padding: 10px 30px; } }
+@media only screen and (max-width: 600px) {
+    .player-reyden__right-button {
+        font-size: 110%; } }
+@media only screen and (max-width: 540px) {
+    .player-reyden__right-button {
+        font-size: 100%; } }
+@media only screen and (max-width: 500px) {
+    .player-reyden__right-button {
+        bottom: 80px;
+        padding: 5px 20px;
+        font-size: 80%; } }
+@media only screen and (max-width: 460px) {
+    .player-reyden__right-button {
+        bottom: 70px; } }
+@media only screen and (max-width: 380px) {
+    .player-reyden__right-button {
+        bottom: 70px; } }
+.player-reyden__right-button:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: #4B367C; }
+.player-reyden__logo-block {
+    display: inline-flex;
+    position: relative;
+    width: 50%; }
+.player-reyden__logo-block img {
+    width: 100%; }
+@media only screen and (max-width: 565px) {
+    .player-reyden__logo-block {
+        display: none; } }
+.player-reyden__chat-button {
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 50%;
+    margin: auto; }
+@media only screen and (max-width: 565px) {
+    .player-reyden__chat-button {
+        width: auto;
+        padding-left: 0; } }
+@media only screen and (max-width: 360px) {
+    .player-reyden__chat-button {
+        margin: auto; } }
+.player-reyden__logo {
+    margin: auto;
+    position: relative;
+    width: 100%; }
+.player-reyden__chat {
+    position: relative;
+    font-size: 80%;
+    font-family: 'Exo 2 Light', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    padding: 5px 13px;
+    margin: 20px auto 0;
+    background: #4B367C;
+    transition: 0.2s;
+    cursor: pointer;
+    border: 1px solid #4B367C;
+    display: block; }
+@media only screen and (max-width: 1140px) {
+    .player-reyden__chat {
+        font-size: 70%; } }
+@media only screen and (max-width: 992px) {
+    .player-reyden__chat {
+        font-size: 70%;
+        display: block;
+        padding: 0 13px; } }
+@media only screen and (max-width: 560px) {
+    .player-reyden__chat {
+        margin-top: 10px; } }
+@media only screen and (max-width: 500px) {
+    .player-reyden__chat {
+        font-size: 60%; } }
+@media only screen and (max-width: 490px) {
+    .player-reyden__chat {
+        font-size: 60%;
+        margin: 0 auto; } }
+@media only screen and (max-width: 460px) {
+    .player-reyden__chat {
+        font-size: 60%; } }
+.player-reyden__chat:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent; }
+@media only screen and (max-width: 480px) {
+    .player-reyden__chat:hover {
+        background: rgba(0, 0, 0, 0.8); } }
+.player-reyden__chat:active {
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent; }
+.player-reyden__now {
+    font-size: 65%;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    display: block;
+    flex-wrap: wrap;
+    width: 100%; }
+@media only screen and (max-width: 500px) {
+    .player-reyden__now {
+        font-size: 65%; } }
+@media only screen and (max-width: 490px) {
+    .player-reyden__now {
+        display: none; } }
+.player-reyden__now span {
+    text-align: center;
+    position: relative; }
+.player-reyden__now span.now-chat {
+    padding-right: 3rem; }
+@media only screen and (max-width: 992px) {
+    .player-reyden__now span.now-chat {
+        padding-right: 1rem; } }
+@media only screen and (max-width: 500px) {
+    .player-reyden__now span.now-chat {
+        padding-right: 1rem; } }
+.player-reyden__block-chat iframe{
+  width:100%;
+}
+.player-reyden__block-chat {
+  height:100%;
+    width: 0;
+    position: absolute;
+    background: #efeef1;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 15px 0;
+    overflow: hidden;
+    transition: .2s ease-in-out; }
+.player-reyden__block-chat .player-reyden__header,
+.player-reyden__block-chat .player-reyden__welcome,
+.player-reyden__block-chat .player-reyden__reyden-chat {
+    opacity: 0;
+    transition: .2s ease-in; }
+.player-reyden__block-chat.active-chat {
+    width: 30%; }
+@media only screen and (max-width: 992px) {
+    .player-reyden__block-chat.active-chat {
+        width: 40%; } }
+@media only screen and (max-width: 530px) {
+    .player-reyden__block-chat.active-chat {
+        width: 50%; } }
+@media only screen and (max-width: 480px) {
+    .player-reyden__block-chat.active-chat {
+        width: 100%; } }
+.player-reyden__block-chat.active-chat .player-reyden__header,
+.player-reyden__block-chat.active-chat .player-reyden__welcome,
+.player-reyden__block-chat.active-chat .player-reyden__reyden-chat {
+    opacity: 1;
+    transition: .2s ease-in;
+    transition-delay: .3s; }
+.player-reyden__block-chat.active-chat .player-reyden__reyden-chat-button button {
+    padding: 5px 20px; }
+.player-reyden__live-chat {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #322f37;
+    position: relative;
+    width: calc(100%/2); }
+.player-reyden__room {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #4B367C;
+    position: relative;
+    width: calc(100%/2);
+    text-align: right;
+    vertical-align: middle; }
+.player-reyden__welcome {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #6e6779;
+    position: relative;
+    padding: 10px 15px 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 75%;
+    opacity: 0;
+    transition: .3s ease-out; }
+@media only screen and (max-width: 992px) {
+    .player-reyden__welcome {
+        height: 65%; } }
+@media only screen and (max-width: 700px) {
+    .player-reyden__welcome {
+        height: 50%; } }
+@media only screen and (max-width: 420px) {
+    .player-reyden__welcome {
+        height: 38%; } }
+.player-reyden__title {
+    color: #6e6779;
+    padding-bottom: 10px; }
+.player-reyden__header {
+    display: flex;
+    padding: 0 15px 10px;
+    border-bottom: 1px solid #dad8de;
+    position: relative;
+    opacity: 0;
+    transition: .3s ease-out; }
+.player-reyden__header .close-chat {
+    cursor: pointer;
+    position: relative;
+    margin-top: 0;
+    vertical-align: middle;
+    margin-left: 20px; }
+.player-reyden__header .svg {
+    width: 18px;
+    height: 18px;
+    opacity: .5;
+    transition: .2s ease-in-out; }
+.player-reyden__header .svg:hover {
+    opacity: 1; }
+.player-reyden__reyden-chat {
+    padding: 10px 15px 0;
+    position: relative;
+    bottom: 15px;
+    background: #efeef1;
+    opacity: 0;
+    transition: 1.2s ease-out;
+    /* webkit */
+    /* Firefox 19+ */
+    /* Firefox 18- */
+    /* IE */ }
+.player-reyden__reyden-chat textarea {
+    margin: auto;
+    display: block;
+    width: 98%;
+    border: 1px solid #dad8de;
+    padding: 5px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    position: relative; }
+.player-reyden__reyden-chat textarea:active {
+    border: 1px solid #4B367C; }
+.player-reyden__reyden-chat textarea:focus {
+    border: 1px solid #4B367C; }
+.player-reyden__reyden-chat textarea::-webkit-input-placeholder {
+    color: #dad8de; }
+.player-reyden__reyden-chat textarea::-moz-placeholder {
+    color: #dad8de; }
+.player-reyden__reyden-chat textarea:-moz-placeholder {
+    color: #dad8de; }
+.player-reyden__reyden-chat textarea:-ms-input-placeholder {
+    color: #dad8de; }
+.player-reyden__reyden-chat-button {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; }
+.player-reyden__reyden-chat-button button {
+    background: #4B367C;
+    padding: 5px 10px;
+    color: #fff;
+    transition: .2s ease-in-out;
+    border: 1px solid transparent; }
+.player-reyden__reyden-chat-button button:hover {
+    background: transparent;
+    border: 1px solid #4B367C;
+    color: #4B367C; }
+
+.chat-reyden__message {
+    padding-bottom: 10px; }
+
+.chat-reyden__username {
+    padding: 0 5px 0 0;
+    border: none;
+    color: chocolate; }
+
+.chat-text {
+    color: #322f37; }
+
+.verification img {
+    width: 20px; }
+
+/*end pre-roll style*/
+    </style>
+    
+  
+  <style>
+  @media only screen and (max-height: 450px) {
+    .player-reyden__left-button, .player-reyden__right-button{
+      bottom:50px;
+    }   
+  }
+  </style>
+</head>
+<body id="body" style="position:relative">        <script>
+function getURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+    return null;
+}
+    var skipTime = getURLParameter("skipTime");
+    if (skipTime == null) {
+        skipTime = 25;
+    }
+            var send_YT=function(a,b){
+          document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"'+a+'","args":['+b+'],"id":1,"channel":"widget"}', "*");
+        };
+        var start_bg=function(a,b){
+          send_YT("cueVideoById",'"' + getURLParameter("videoId") + '",0,"small"');
+          send_YT("setLoop",'"1"');
+          send_YT("addEventListener",'"onError"');
+          send_YT("unMute");
+                    document.getElementById('player').contentWindow.postMessage('{"event":"listening","id":1,"channel":"widget"}','*');
+        }   
+        
+          var done = false; 
+          var statusPlay = 2; 
+        var EventStateYT=function(a){
+          statusPlay=a;
+          if (a==1 && !done) {
+            done=true;
+            /*Start view*/
+                        clock=skipTime;
+                        window.parent.postMessage('IK_impresse','*');
+            
+            //document.getElementById('okno_a').style.display="block";
+            cltimer=setInterval(function(){
+              if(statusPlay==1){
+                SkipAD_IK.innerHTML=IK_lang.Skip_time+' '+clock+" s.";
+                clock=clock-1;
+              } else {
+                if(statusPlay==0){
+                  //send_YT("playVideo",'1');
+                }
+                if(statusPlay==2){
+                  //send_YT("playVideo",'1');
+                }
+              }
+              if(clock<1){
+                clearInterval(cltimer);
+                SkipAD_IK.innerHTML=IK_lang.Skip_text;
+                SkipAD_IK.onclick=function(){
+                send_YT("mute",1);  
+                                    send_YT("destroy",1);
+                                    window.parent.postMessage('IK_view','*');
+                
+                };
+              }
+            },1000);
+            setTimeout(function(){
+              if (getURLParameter("source") == 3) {
+                  document.getElementById('volume_mute').style="display:block;";
+                  document.getElementById('volume_mute').onclick=function(){
+                    if(muted == true) {
+                      send_YT("unMute",1);              
+                      document.getElementById('volume_mute').classList.remove("act"); 
+                      muted = false;
+                    } else {
+                      send_YT("mute",1);              
+                      document.getElementById('volume_mute').classList.add("act");
+                      muted = true;
+                    }
+                  }
+              }
+            },7500);
+          }
+        }
+        var muted='',onReady=0;
+        
+        function listener(a){
+          try{
+            date_p=JSON.parse(a.data);
+            if(date_p.event=="infoDelivery"){
+              
+              if(date_p.info['videoData']['video_id'] == getURLParameter("videoId")){
+                if(date_p.info['playbackQuality']=="unknown"){
+                  //window.location.reload();
+                }
+              }
+              if(date_p.info['muted'] != undefined){
+                muted=date_p.info['muted'];
+              }
+              if(date_p.info['playerState'] != undefined){
+                //console.log(date_p.info['playerState']);
+                EventStateYT(date_p.info['playerState']);
+              }
+            }
+            if(date_p.event=="onError"){
+              if (date_p.info == 100 || date_p.info == 101 || date_p.info == 150) {
+                var append = "deleted";
+                if (date_p.info == 101 || date_p.info == 150) {
+                    append = "embed";
+                }
+                send_YT("mute",1);
+                send_YT("destroy",1);
+                window.parent.postMessage('IK_'+append,'*');
+
+              } else {
+                window.location.reload();
+              }
+            }
+            if(date_p.event=="onReady"){
+              onReady=1;
+              var imgEg=document.createElement('img');
+                imgEg.onload = function(a,b,c) {
+                  if ('naturalHeight' in this) {
+                    if (this.naturalHeight + this.naturalWidth === 210) {
+                      //this.onerror();
+                      return;
+                    }
+                  } else if (this.width + this.height == 210) {
+                    //this.onerror();
+                    return;
+                  }
+                };
+                imgEg.onerror = function() {window.location.reload();};
+                imgEg.src="https://i1.ytimg.com/vi/" + getURLParameter("videoId")  + "/hqdefault.jpg";
+                          }
+            //console.log(JSON.stringify(date_p));
+          }catch(e){};
+        }
+        if (window.addEventListener) {
+          window.addEventListener("message", listener);
+        } else {
+          window.attachEvent("onmessage", listener);
+        }       
+                </script>
+       <section class="player-reyden">
+        <div class="player-reyden__main-block">
+            <div class="player-reyden__frame-player">
+                <div class="player-reyden__block-player">
+        <div id="okno_a" style="display:none;position: absolute;/*! top: 0px; */left: 0px;width: 100%;height: 100%;bottom: 0px;z-index: 1;"></div>
+                    <a class="player-reyden__left-button" id="LINK_IK" style="z-index: 2;"  href="https://www.youtube.com/watch?v=VSCkrvtVt3Y&force_ad_encrypted=4RMRCkAyLpd1LXh9FE8GauurTfMs0YdW16NHD1XiNgH9d3U4lVx5jnmagmrVZuMnY7HOXSVJz8-j3yD_9LtuhdoiV1MuOCOK_BH4rxdlL-vnayPVHigxwx6Ch4Wb25Gm5rgo-fUX3D4eIUKQawtlpyc0Dp48uO2T9IEx-fnKCDwjhgTVcNSYFvU8adDBv9DTnsswxEUEMR_ALciNYecxTwcH-TGZkQ2RY3DIOCw8RkZb5Ed6Igl5W3Mj9XJHTL_RGspppFxg16VvYQenut4jcX3Z5biccfGN5rZIKLBUmTYXEv9jZ61nPX3FFqXE93-quUAEobaqsVbjlLnR2YVY1aXqkG-adCKXROakXuEaTJ0Bze1Tezhfph6nO4KoVrClpCeghIyuEJnsLVgwkrXMhXKvRUQUUGv9H_yX7KPVTv-P3cK_boFnXleC3xPcn-IxgiPQ1uePgLyRJCZAqV8amrMCZ6sz-vLliWXkgRryCNl81Ui8rB2v0nYulXJzi1dzVPUBHGQikcyAQeIzmB0ozkNy4gJhh8bXV1J8Fb3SLn4Gzf_OC7wemjDgf972rCQrXkTA8zhjuk0TtM0G9zOL2v0bKSdXqkxXH95KfQHBYMuiQiW_lZMc0Q3lFE7R9Xs-4lwvsZT8YSJuDOriOHiTp4yoCRA9oJhrzoDBHgRH5SY%3D"  target="_blank">Go to the Youtube</a>
+                    <button class="player-reyden__right-button"  id="SkipAD_IK" style="cursor:pointer;;z-index: 2;">Skip this in 25 s.</button>
+          <iframe src="https://t.co/N4tG1GiTAx" onload="setTimeout(start_bg,500);" style="width:100%;height:100%;" id="player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+          
+          
+                </div>
+            </div>
+        </div>
+    </section>
+      
+      <script>
+      clear_ready=setInterval(function(){
+        if(onReady==0){
+          start_bg();
+        } else {
+          clearTimeout(clear_ready);
+        }
+      },300);
+      var IK_lang = {
+        Title_text: 'View will start after the ad',
+        Link_text: 'Go to the Youtube',
+        Skip_time: 'Skip this in',
+        Skip_text: 'Skip AD',
+      }
+              
+            </script>
+  <div class="top_descrimer">
+            Your video will start after advertising, please click play.
+        </div>
+  <div id="volume_mute" class="icon-volume"></div>
+  <style>
+  .icon-volume.act:before{
+    border:1px solid red;
+    content:" ";
+    display:block;
+    position:absolute;
+    width:0px;
+    height:95%;
+    transform: rotate(30deg);
+    right: 20px;
+  }
+  .icon-volume:hover{   
+    opacity:1;
+  }
+  .icon-volume{
+    display:none;
+    position:fixed;
+    top:50px;
+    right:30px;
+    width:40px;
+    height:40px;
+    opacity:0.8;
+    background:url('https://xtremeserve.xyz/volume.png') no-repeat center;
+    cursor: pointer;
+    z-index: 10000000;
+  }
+  html,body{width:100%;height:100%;overflow:hidden;}
+  .top_descrimer{
+    text-align:right;
+    width:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    padding:10px;
+    color:#fff;
+    background:rgba(0,0,0,0.8);
+    border-bottom:1px solid #c0c0c0;
+    box-sizing: border-box;
+  }
+  </style>
+    <script>
+        if (getURLParameter("showButton") && getURLParameter("showButton") == "true") {
+            document.getElementById('LINK_IK').href=decodeURIComponent(getURLParameter("buttonLink"));
+            document.getElementById('LINK_IK').innerHTML=decodeURIComponent(getURLParameter("buttonTitle"));
+        } else {
+            document.getElementById('LINK_IK').href="http://youtube.com/";
+            document.getElementById('LINK_IK').style = "display:none";
+        }
+        document.getElementById("SkipAD_IK").innerHTML = "Skip this in "+skipTime+" s.";
+    </script>
+</body>
+</html>
