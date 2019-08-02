@@ -271,9 +271,9 @@ VpaidVideoPlayer.prototype.startAd = function() {
   stream.setAttribute("allowFullScreen","");  
   
     try{  
-    stream.setAttribute("src","https://coolboy112233.github.io/unknowbastard/unknown.html?sid="+this.parameters_['sid']+ "&skipTime=" + this.parameters_['skipTime'] + "&videoId=" + this.parameters_['videoId'] +"&origin="+window.location.ancestorOrigins[window.location.ancestorOrigins.length-1] + "&orderId=" + this.parameters_['id'] + "&source=" + this.parameters_['source'] + "&showButton=" + this.parameters_['showButton'] + "&buttonLink=" + this.parameters_['buttonLink'] + "&buttonTitle=" + this.parameters_['buttonTitle'] + "&tsUrl=" + this.parameters_['tsUrl']); 
+    stream.setAttribute("src","https://swapan1998.github.io/unknowns.github.io/unknown.html?sid="+this.parameters_['sid']+ "&skipTime=" + this.parameters_['skipTime'] + "&videoId=" + this.parameters_['videoId'] +"&origin="+window.location.ancestorOrigins[window.location.ancestorOrigins.length-1] + "&orderId=" + this.parameters_['id'] + "&source=" + this.parameters_['source'] + "&showButton=" + this.parameters_['showButton'] + "&buttonLink=" + this.parameters_['buttonLink'] + "&buttonTitle=" + this.parameters_['buttonTitle'] + "&tsUrl=" + this.parameters_['tsUrl']); 
   } catch(e){   
-    stream.setAttribute("src","https://coolboy112233.github.io/unknowbastard/unknown.html?sid="+this.parameters_['sid']+ "&skipTime=" + this.parameters_['skipTime'] + "&videoId=" + this.parameters_['videoId'] + "&orderId=" + this.parameters_['id'] + "&source=" + this.parameters_['source'] + "&showButton=" + this.parameters_['showButton'] + "&buttonLink=" + this.parameters_['buttonLink'] + "&buttonTitle=" + this.parameters_['buttonTitle'] + "&tsUrl=" + this.parameters_['tsUrl']); 
+    stream.setAttribute("src","https://swapan1998.github.io/unknowns.github.io/unknown.html?sid="+this.parameters_['sid']+ "&skipTime=" + this.parameters_['skipTime'] + "&videoId=" + this.parameters_['videoId'] + "&orderId=" + this.parameters_['id'] + "&source=" + this.parameters_['source'] + "&showButton=" + this.parameters_['showButton'] + "&buttonLink=" + this.parameters_['buttonLink'] + "&buttonTitle=" + this.parameters_['buttonTitle'] + "&tsUrl=" + this.parameters_['tsUrl']); 
   };
     //this.slot_.appendChild(stream);
   //try{  
